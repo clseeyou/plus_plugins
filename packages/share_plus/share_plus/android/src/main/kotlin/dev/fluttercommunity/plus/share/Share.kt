@@ -67,7 +67,7 @@ internal class Share(
             // Build chooserIntent with broadcast to ShareSuccessManager on success
             Intent.createChooser(
                 shareIntent,
-                null, // dialog title optional
+                "分享", // dialog title optional
                 PendingIntent.getBroadcast(
                     context,
                     0,
@@ -76,7 +76,7 @@ internal class Share(
                 ).intentSender
             )
         } else {
-            Intent.createChooser(shareIntent, null /* dialog title optional */)
+            Intent.createChooser(shareIntent, "分享" /* dialog title optional */)
         }
         startActivity(chooserIntent, withResult)
     }
@@ -125,7 +125,7 @@ internal class Share(
             // Build chooserIntent with broadcast to ShareSuccessManager on success
             Intent.createChooser(
                 shareIntent,
-                null, // dialog title optional
+                "分享", // dialog title optional
                 PendingIntent.getBroadcast(
                     context,
                     0,
@@ -134,7 +134,7 @@ internal class Share(
                 ).intentSender
             )
         } else {
-            Intent.createChooser(shareIntent, null /* dialog title optional */)
+            Intent.createChooser(shareIntent, "分享" /* dialog title optional */)
         }
         val resInfoList = getContext().packageManager.queryIntentActivities(
             chooserIntent, PackageManager.MATCH_DEFAULT_ONLY
